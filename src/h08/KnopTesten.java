@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class KnopTesten extends Applet {
     TextField tekstvak;
     Button knop;
-    String output="Je tekst is gereset.";
+    String output;
     Button reset;
 
     public void init() {
@@ -44,7 +44,6 @@ public class KnopTesten extends Applet {
 
     class ResetknopListener implements ActionListener    {
         public void actionPerformed( ActionEvent e ) {
-            output = "Je tekstvak wordt gereset";
             tekstvak.setText("Je tekst wordt over 5 Seconden gereset.");
             repaint();
             try {
