@@ -56,5 +56,4 @@ public class KnopTesten extends Applet {
             repaint();
         }
     }
-
 }
