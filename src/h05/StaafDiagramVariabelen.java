@@ -21,25 +21,27 @@ public class StaafDiagramVariabelen extends Applet {
         Jeroen = Color.GREEN;
         // Breedte/Hoogte Staven
         breedte = 20;
-        HoogteX = 400;
+        HoogteX = 250;
         // Gewicht Personen
         GewichtHans = 100;
-        GewichtValerie = 50;
+        GewichtValerie = 20;
         GewichtJeroen = 80;
     }
     public void paint(Graphics g) {
         // Diagram
-        g.drawLine(50,50,50,400);
+        g.drawLine(50,50,50,HoogteX);
         g.drawLine(50,HoogteX,HoogteX,HoogteX);
         // Verdeling
-        g.drawString("20 KG", 0, 400);
-        g.drawString("40 KG", 0, 350);
-        g.drawString("60 KG", 0, 300);
-        g.drawString("80 KG", 0, 250);
-        g.drawString("100 KG", 0, 200);
-        g.drawString("120 KG", 0, 150);
-        g.drawString("140 KG", 0, 100);
-        g.drawString("160 KG", 0, 50);
+        g.drawString("20 KG", 0, HoogteX-20);
+        g.drawString("40 KG", 0, HoogteX-40);
+        g.drawString("60 KG", 0, HoogteX-60);
+        g.drawString("80 KG", 0, HoogteX-80);
+        g.drawString("100 KG", 0, HoogteX-100);
+        g.drawString("120 KG", 0, HoogteX-120);
+        g.drawString("140 KG", 0, HoogteX-140);
+        g.drawString("160 KG", 0, HoogteX-160);
+        g.drawString("180 KG",0,HoogteX-180);
+        g.drawString("200 KG",0,HoogteX-200);
         // Valerie
         g.setColor(Valerie);
         g.fillRect(76, HoogteX - GewichtValerie, breedte, GewichtValerie);
