@@ -5,13 +5,16 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class RekenMachine extends Applet {
+    // Tekstvlakken
     TextField tekstvak1;
     TextField tekstvak2;
+    // Knoppen
     Button plusknop;
     Button minknop;
     Button keerknop;
     Button deelknop;
     Button clearknop;
+    // Rekengegevens
     double resultaat;
     double getal1;
     double getal2;
