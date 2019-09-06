@@ -112,6 +112,8 @@ public class RekenMachine extends Applet {
     class ClearKnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             //Resetten
+            tekstvak1.getText();
+            tekstvak2.getText();
             tekstvak1.setText("");
             tekstvak2.setText("");
             repaint();
