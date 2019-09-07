@@ -45,14 +45,14 @@ public class StaafDiagramVariabelen extends Applet {
         // Valerie
         g.setColor(Valerie);
         g.fillRect(76, HoogteX - GewichtValerie, breedte, GewichtValerie);
-        g.drawString("Valerie", 65, 465);
+        g.drawString("Valerie", 65, 265);
         // Jeroen
         g.setColor(Jeroen);
         g.fillRect(151, HoogteX - GewichtJeroen, breedte, GewichtJeroen);
-        g.drawString("Jeroen", 140, 465);
+        g.drawString("Jeroen", 140, 265);
         // Hans
         g.setColor(Hans);
         g.fillRect(226, HoogteX - GewichtHans, breedte, GewichtHans);
-        g.drawString("Hans", 220, 465);
+        g.drawString("Hans", 220, 265);
     }
 }
