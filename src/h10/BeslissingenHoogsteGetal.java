@@ -20,7 +20,7 @@ public class BeslissingenHoogsteGetal extends Applet {
         add(tekstvak);
     }
     public void paint(Graphics g) {
-        g.drawString("Het hoogstegetal wat u heeft ingevuld is: "+hoogstegetal,50,65);
+        g.drawString("Het hoogste getal dat u heeft ingevuld is: "+hoogstegetal,50,65);
     }
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
