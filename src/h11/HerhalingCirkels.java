@@ -11,8 +11,9 @@ public class HerhalingCirkels extends Applet {
         int x = 0;
         int y = 0;
         int teller = 0;
+        int aantal = 5;
 
-        while (teller <5) {
+        while (teller < aantal) {
             x +=5;
             y +=5;
             g.drawOval(100-x,100-y,0+(x*2),0+(y*2));
