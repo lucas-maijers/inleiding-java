@@ -1,4 +1,4 @@
-// Opdracht 5
+// Opdracht 05
 package h11;
 
 import java.applet.*;
