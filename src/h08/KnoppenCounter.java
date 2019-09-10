@@ -1,6 +1,6 @@
+// Opdracht 02
 package h08;
 
-import javax.swing.*;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;

@@ -1,3 +1,4 @@
+// Opdracht 03
 package h06;
 
 import java.applet.*;

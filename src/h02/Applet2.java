@@ -1,3 +1,4 @@
+// Opdracht 02
 package h02;
 
 import java.applet.*;

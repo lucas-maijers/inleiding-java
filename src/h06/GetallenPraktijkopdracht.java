@@ -1,3 +1,4 @@
+// PraktijdOpdracht
 package h06;
 
 import java.applet.*;

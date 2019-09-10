@@ -1,3 +1,4 @@
+// Opdracht 02
 package h04;
  import java.applet.*;
  import java.awt.*;

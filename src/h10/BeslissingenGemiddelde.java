@@ -1,3 +1,4 @@
+// Opdracht 05
 package h10;
 
 import java.applet.*;
