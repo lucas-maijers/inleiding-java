@@ -23,7 +23,7 @@ public class BeslissingenGemiddelde extends Applet {
         tekstvak.addActionListener(new TekstvakListener());
         cijferinput = 0;
         tekst = "Nog geen getallen gedetecteerd.";
-        uitslag = "";
+        uitslag = "Nog niet berekend.";
         add(label);
         add(tekstvak);
         add(knop);
