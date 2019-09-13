@@ -62,7 +62,7 @@ public class BeslissingenMaandenUitbereiden extends Applet {
                     break;
                 case 3:
                     tekst = "maart";
-                    dagen = "28";
+                    dagen = "31";
                     break;
                 case 4:
                     tekst = "april";
