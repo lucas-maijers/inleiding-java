@@ -16,7 +16,6 @@ public class TabellenKnoppen extends Applet {
         int y=20;
 
         for (teller=1; teller <= aantal.length; teller++) {
-            setLocation(20,y+=20);
             knop=new Button("Knop" + teller);
             add(knop);
         }
