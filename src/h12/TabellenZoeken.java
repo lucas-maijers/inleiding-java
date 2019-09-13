@@ -54,7 +54,7 @@ public class TabellenZoeken extends Applet {
             while(teller<getallen.length) {
                 if (getallen[teller] == gezocht) {
                     gevonden=true;
-                    tekst = "Het ingevoerde getal: "+gezocht+" IndexNummer:"+"["+String.valueOf(teller-1)+"]"+" is gevonden.";;
+                    tekst = "Het ingevoerde getal: "+gezocht+" IndexNummer:"+"["+ (teller - 1) +"]"+" is gevonden.";;
                     repaint();
                 }
                 teller ++;
