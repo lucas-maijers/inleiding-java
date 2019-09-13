@@ -11,6 +11,7 @@ public class TabellenSorteren extends Applet {
     Button okknop;
 
     public void init() {
+        setSize(1000,200);
         getallen = new int[5];
         // Tekstvakken
         tekstvakken = new TextField[5];
