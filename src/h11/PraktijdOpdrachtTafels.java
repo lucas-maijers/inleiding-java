@@ -17,6 +17,7 @@ public class PraktijdOpdrachtTafels extends Applet {
         input = new TextField("",20);
         knop = new Button("Ok");
         knop.addActionListener(new KnopListener());
+        input.addActionListener(new KnopListener());
         add(label);
         add(input);
         add(knop);
