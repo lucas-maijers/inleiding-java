@@ -31,7 +31,7 @@ public class BeslissingenGetalCounter extends Applet {
             laagstegetal = dummy;
             hoogstegetal = dummy2;
             //hoogstegetal
-            if ((getal > hoogstegetal) && (getal > dummy2)) {
+            if (getal > hoogstegetal) {
                 dummy2 = getal;
                 hoogstegetal = getal;
                 repaint();
