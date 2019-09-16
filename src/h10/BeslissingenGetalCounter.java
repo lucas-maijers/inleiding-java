@@ -18,7 +18,7 @@ public class BeslissingenGetalCounter extends Applet {
         add(label);
         add(tekstvak);
         dummy = 2147483647;
-        dummy2 = -214783647;
+        dummy2 = -2147483647;
     }
     public void paint(Graphics g) {
         g.drawString("Het hoogste getal dat u heeft ingevuld is: "+hoogstegetal,50,65);
