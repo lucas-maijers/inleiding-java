@@ -20,7 +20,7 @@ public class KnoppenCounter extends Applet {
         mknop.addActionListener( new mknopListener());
         mknopg.addActionListener(new mknopgListener());
         vknop.addActionListener(new vknopListener());
-       vknopg.addActionListener(new vknopgListener());
+        vknopg.addActionListener(new vknopgListener());
         // Voeg de knoppen toe.
         add(mknop);
         add(mknopg);
