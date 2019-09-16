@@ -38,7 +38,6 @@ public class TabellenWaardeTonen extends Applet {
             s = tekstvak.getText();
             gezocht = Integer.parseInt(s);
 
-
             // Zoeken in het tabel
 
             while (teller < tabel.length) {
@@ -56,11 +55,7 @@ public class TabellenWaardeTonen extends Applet {
             else {
                 tekst = "Het getal "+gezocht+" staat niet in de tabel";
             }
-
-            // Strings benoemen
-
-
-
+            
             repaint();
 
             // Aantal Resetten
