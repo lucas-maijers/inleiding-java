@@ -9,7 +9,7 @@ public class BeslissingenGetalCounter extends Applet {
     TextField tekstvak;
     Label label;
     String s;
-    int hoogstegetal, laagstegetal, getal, dummy;
+    int hoogstegetal, laagstegetal, getal, dummy, dummy2;
 
     public void init() {
         tekstvak = new TextField("",20);
@@ -18,6 +18,7 @@ public class BeslissingenGetalCounter extends Applet {
         add(label);
         add(tekstvak);
         dummy = 2147483647;
+        dummy2 = -214783647;
     }
     public void paint(Graphics g) {
         g.drawString("Het hoogste getal dat u heeft ingevuld is: "+hoogstegetal,50,65);
@@ -28,8 +29,10 @@ public class BeslissingenGetalCounter extends Applet {
             s = tekstvak.getText();
             getal = Integer.parseInt(s);
             laagstegetal = dummy;
+            hoogstegetal = dummy2;
             //hoogstegetal
-            if (getal > hoogstegetal) {
+            if ((getal > hoogstegetal) && (getal > dummy2)) {
+                dummy2 = getal;
                 hoogstegetal = getal;
                 repaint();
             }
