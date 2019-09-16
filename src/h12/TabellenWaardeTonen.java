@@ -55,7 +55,7 @@ public class TabellenWaardeTonen extends Applet {
             else {
                 tekst = "Het getal "+gezocht+" staat niet in de tabel";
             }
-            
+
             repaint();
 
             // Aantal Resetten
