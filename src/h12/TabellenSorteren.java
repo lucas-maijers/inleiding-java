@@ -16,7 +16,7 @@ public class TabellenSorteren extends Applet {
         // Tekstvakken
         tekstvakken = new TextField[5];
         tekstvakken[0] = new TextField(20);
-        tekstvakken[1] =  new TextField(20);
+        tekstvakken[1] = new TextField(20);
         tekstvakken[2] = new TextField(20);
         tekstvakken[3] = new TextField(20);
         tekstvakken[4] = new TextField(20);
