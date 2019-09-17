@@ -15,7 +15,7 @@ public class TabellenStopZoeken extends Applet {
             if(salaris[teller] > maximum) {
                 maximum=salaris[teller-1];
                 gevonden = true;
-                teller++;
+                System.out.println("Aantal keer gezocht: " + teller);
             } else if (gevonden && maximum < salaris[teller]) {
                 gevonden = false;
             }
