@@ -5,7 +5,9 @@ import java.applet.*;
 import java.awt.*;
 
 public class HerhalingCirkelsUitbereiden extends Applet {
-    public void init() {}
+    public void init() {
+        setSize(800,700);
+    }
 
     public void paint(Graphics g) {
         int x = 0;
