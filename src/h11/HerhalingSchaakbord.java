@@ -9,7 +9,7 @@ public class HerhalingSchaakbord extends Applet {
     public void init(){}
 
     public void paint(Graphics g) {
-        int x=50;
+        int x;
         int y=50;
         int breedte=25;
         int hoogte=25;
