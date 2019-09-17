@@ -16,7 +16,7 @@ public class BeslissingenGemiddelde extends Applet {
     public void init() {
         label = new Label("Vul hier uw cijfers in");
         tekstvak = new TextField("",15);
-        knop = new Button("Ok");
+        knop = new Button("UITSLAG");
         reset = new Button("RESET");
         reset.addActionListener(new ResetListener());
         knop.addActionListener(new KnopListener());
