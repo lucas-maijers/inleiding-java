@@ -23,7 +23,9 @@ public class MethodesMuur extends Applet {
         while (teller < hoogteMuur) {
             x=50;
             beginX = 50 + breedteEind;
+            // Even rijen
             if (teller % 2 == 0) {
+                /* Eindstukken van de muur */
                 for (int i=0; i < breedteMuur; i++) {
                     if (i == 0 || i == breedteMuur-1) {
                         g.setColor(zwart);
@@ -31,7 +33,9 @@ public class MethodesMuur extends Applet {
                         g.setColor(rood);
                         g.fillRect(beginX+1,y+1,breedteEind-1,hoogte-1);
                         beginX = 50* breedteMuur;
-                    } else {
+                    }
+                    // Vullen
+                    else {
                         g.setColor(zwart);
                         g.drawRect(x,y,breedte,hoogte);
                         g.setColor(rood);
