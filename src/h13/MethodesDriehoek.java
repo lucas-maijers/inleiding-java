@@ -11,7 +11,6 @@ public class MethodesDriehoek extends Applet {
 
     public void paint(Graphics g) {
         tekenDriehoek(g, 50, 100, 100, 100, 75, 50);
-
     }
 
     void tekenDriehoek(Graphics g, int x1, int y1, int x2, int y2, int x3, int y3) {
