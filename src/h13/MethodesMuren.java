@@ -125,13 +125,13 @@ public class MethodesMuren extends Applet {
     //BetonMuur
     void tekenBetonMuur(Graphics g, int hoogteMuur, int breedteMuur) {
         int teller=0;
-        int x, y=40, breedte=50,hoogte=35, breedteEind=25;
+        int x, y=40, breedte=60,hoogte=35, breedteEind=30;
         int beginX;
         Color zwart=Color.BLACK;
         Color grijs=Color.DARK_GRAY;
 
         while (teller < hoogteMuur) {
-            x=50;
+            x=breedte;
             beginX = breedte + breedteEind;
             // Even rijen
             if (teller % 2 == 0) {
