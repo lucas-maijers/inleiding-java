@@ -78,10 +78,10 @@ public class MultimediaDeckDelen extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Speler 1", 20,50);
-        g.drawString("Speler 2",120,50);
-        g.drawString("Speler 3",220,50);
-        g.drawString("Speler 4",320,50);
+        g.drawString("Speler 1", 40,50);
+        g.drawString("Speler 2",160,50);
+        g.drawString("Speler 3",280,50);
+        g.drawString("Speler 4",400,50);
 
         int speler;
         int y;
@@ -96,7 +96,7 @@ public class MultimediaDeckDelen extends Applet {
                 g.drawString("" + deelKaart(), x,y);
                 y+=15;
             }
-            x+=100;
+            x+=120;
             speler++;
         }
         sound.play();
