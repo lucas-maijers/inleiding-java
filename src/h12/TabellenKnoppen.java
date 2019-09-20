@@ -21,7 +21,6 @@ public class TabellenKnoppen extends Applet {
         }
     }
 
-    public void paint(Graphics g) {
-        }
+    public void paint(Graphics g) {}
 }
 
