@@ -35,26 +35,26 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         setSize(800, 700);
 
         // Afbeelding bepalen
-        pad=PraktijkOpdrachtSpelletje.class.getResource("/resources/");
-        verlorenCP=getImage(pad, "ComputerVerloren.jpeg");
-        gewonnenCP=getImage(pad, "ComputerGewonnen.jpeg");
-        wSmiley=getImage(pad, "ComputerWinnend.jpeg");
-        vSmiley=getImage(pad, "NeutralSmiley.jpeg");
-        winSound=getAudioClip(pad,"YaySoundEffect.wav");
-        verliesSound=getAudioClip(pad,"AwwSoundEffect.wav");
+        pad = PraktijkOpdrachtSpelletje.class.getResource("/resources/");
+        verlorenCP = getImage(pad, "ComputerVerloren.jpeg");
+        gewonnenCP = getImage(pad, "ComputerGewonnen.jpeg");
+        wSmiley = getImage(pad, "ComputerWinnend.jpeg");
+        vSmiley = getImage(pad, "NeutralSmiley.jpeg");
+        winSound = getAudioClip(pad,"YaySoundEffect.wav");
+        verliesSound = getAudioClip(pad,"AwwSoundEffect.wav");
 
         // Sommige Waarde enzo
-        computerZet=false;
-        huidigeZet=1;
+        computerZet = false;
+        huidigeZet = 1;
         aantalSmileys=23;
-        response="";
-        startSmiley=vSmiley;
+        response = "";
+        startSmiley = vSmiley;
 
         // Tekstvakken en die bende
-        informatie=new Label("Hoeveel smileys neem je (één, twee of drie)?");
-        input=new TextField(20);
-        speel=new Button("Speel");
-        newGame=new Button("Nieuw Spel");
+        informatie = new Label("Hoeveel smileys neem je (één, twee of drie)?");
+        input = new TextField(20);
+        speel = new Button("Speel");
+        newGame = new Button("Nieuw Spel");
 
         // Listeners
         speel.addActionListener(new HaalSmileysWeg());
@@ -69,16 +69,16 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     }
 
     public void paint(Graphics g) {
-        int x=50;
-        int y = 100;
 
         nogTeGaan = "Nog weg te halen Smileys: " + aantalSmileys;
         g.drawString(response,50,50);
         g.drawString(nogTeGaan,50,75);
 
         // Smileys te gaan
+        int x=50;
+        int y=100;
         for (int i=0; i < aantalSmileys; i++) {
-            if (i == 4 || i == 8 || i == 12 || i == 16 || i == 20) {
+            if (i % 4 == 0) {
                 y +=55;
                 x = 50;
             }
@@ -87,10 +87,10 @@ public class PraktijkOpdrachtSpelletje extends Applet {
 
         // EindSmiley
         if (gameOver) {
-            if (computerZet) {
-                g.drawImage(verlorenCP,50,100,400,400,this);
-            } else {
+            if (!computerZet) {
                 g.drawImage(gewonnenCP,50,100,300,400,this);
+            } else {
+                g.drawImage(verlorenCP,50,100,400,400,this);
             }
         }
     }
@@ -148,19 +148,19 @@ public class PraktijkOpdrachtSpelletje extends Applet {
                 huidigeZet++;
                 startSmiley = wSmiley;
             }
-            else aantalWeghalen=1;
+            else aantalWeghalen = 1;
         }
         //zet 2
         if (huidigeZet == 2) {
             if (aantalSmileys < 17) {
                 if (aantalSmileys - 1 == 13) {
-                    aantalWeghalen=1;
+                    aantalWeghalen = 1;
                 }
                 if (aantalSmileys - 2 == 13) {
-                    aantalWeghalen=2;
+                    aantalWeghalen = 2;
                 }
                 if (aantalSmileys - 3 == 13) {
-                    aantalWeghalen=3;
+                    aantalWeghalen = 3;
                 }
                 huidigeZet++;
                 startSmiley = wSmiley;
