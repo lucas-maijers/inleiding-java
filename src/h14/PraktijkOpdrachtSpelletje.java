@@ -17,19 +17,19 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     private AudioClip winSound;
     private AudioClip verliesSound;
 
-    boolean computerZet;
-    boolean gameOver;
+    private boolean computerZet;
+    private boolean gameOver;
 
-    int aantalSmileys;
-    int aantalWeghalen;
-    int huidigeZet;
-    Label informatie;
-    TextField input;
-    Button speel;
-    Button newGame;
-    String response;
-    Image startSmiley;
-    String nogTeGaan;
+    private int aantalSmileys;
+    private int aantalWeghalen;
+    private int huidigeZet;
+    private Label informatie;
+    private TextField input;
+    private Button speel;
+    private Button newGame;
+    private String response;
+    private Image startSmiley;
+    private String nogTeGaan;
 
     public void init() {
         setSize(800, 700);
@@ -130,7 +130,6 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             gameOver = false;
             startSmiley = vSmiley;
             repaint();
-            remove(newGame);
         }
     }
 
@@ -277,12 +276,12 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         gameOver = true;
         aantalSmileys = 0;
         if (computerZet) {
-            response = "Gefeliciteerd, je hebt gewonnen.";
+            response = "Dat is gemeen, je hebt mij verslagen.";
             nogTeGaan = "Er zijn geen Smileys meer over.";
             winSound.play();
         }
         else {
-            response = "Helaas, je hebt verloren";
+            response = "HAHA, Ik heb gewonnen!";
             nogTeGaan = "Er zijn geen Smileys meer over.";
             verliesSound.play();
         }
