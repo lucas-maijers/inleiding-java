@@ -6,16 +6,17 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MethodesMuren extends Applet {
-    Label hoogteMuurL;
-    Label breedteMuurL;
-    TextField hoogteMuurTF;
-    TextField breedteMuurTF;
-    Button bakstenen;
-    Button beton;
-    boolean betonMuur, baksteenMuur;
+    private Label hoogteMuurL;
+    private Label breedteMuurL;
+    private TextField hoogteMuurTF;
+    private TextField breedteMuurTF;
+    private Button bakstenen;
+    private Button beton;
 
-    int hoogteMuur;
-    int breedteMuur;
+    private boolean betonMuur, baksteenMuur;
+
+    private int hoogteMuur;
+    private int breedteMuur;
 
     public void init() {
         setSize(800,500);
@@ -78,7 +79,7 @@ public class MethodesMuren extends Applet {
 
     // Baksteen Muur
 
-    void tekenBaksteenMuur(Graphics g, int hoogteMuur, int breedteMuur) {
+    private void tekenBaksteenMuur(Graphics g, int hoogteMuur, int breedteMuur) {
         int teller=0;
         int x, y=40, breedte=50, hoogte=25, breedteEind=25;
         int beginX;
@@ -123,7 +124,7 @@ public class MethodesMuren extends Applet {
         }
     }
     //BetonMuur
-    void tekenBetonMuur(Graphics g, int hoogteMuur, int breedteMuur) {
+    private void tekenBetonMuur(Graphics g, int hoogteMuur, int breedteMuur) {
         int teller=0;
         int x, y=40, breedte=60,hoogte=35, breedteEind=30;
         int beginX;
