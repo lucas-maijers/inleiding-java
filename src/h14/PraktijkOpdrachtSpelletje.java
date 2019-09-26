@@ -69,14 +69,15 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     }
 
     public void paint(Graphics g) {
+        uitleg(g);
 
         nogTeGaan = "Nog weg te halen Smileys: " + aantalSmileys;
-        g.drawString(response,50,50);
-        g.drawString(nogTeGaan,50,75);
+        g.drawString(response,50,110);
+        g.drawString(nogTeGaan,50,125);
 
         // Smileys te gaan
         int x=50;
-        int y=100;
+        int y=130;
         for (int i=0; i < aantalSmileys; i++) {
             if (i % 4 == 0) {
                 y +=55;
@@ -88,9 +89,9 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         // EindSmiley
         if (gameOver) {
             if (!computerZet) {
-                g.drawImage(gewonnenCP,50,100,300,400,this);
+                g.drawImage(gewonnenCP,50,120,300,400,this);
             } else {
-                g.drawImage(verlorenCP,50,100,400,400,this);
+                g.drawImage(verlorenCP,50,120,400,400,this);
             }
         }
     }
@@ -134,7 +135,7 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     }
 
 
-    void computer() {
+    private void computer() {
 
         boolean geenMogelijkheid = true;
         int randomWeg = (int) (Math.random()*3+1);
@@ -272,7 +273,7 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     }
 
     // Spel Voorbij
-    void spelOver() {
+    private void spelOver() {
         gameOver = true;
         aantalSmileys = 0;
         if (computerZet) {
@@ -285,5 +286,16 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             nogTeGaan = "Er zijn geen Smileys meer over.";
             verliesSound.play();
         }
+    }
+    // Uitleg
+    private void uitleg(Graphics g) {
+        Font normal = new Font("Ariel",Font.PLAIN,12);
+        Font f = new Font("Ariel",Font.BOLD,14);
+        g.setFont(f);
+        g.drawString("Welkom bij het spelletje: Steel de Smileys.", 80, 55);
+        g.drawString("In dit spelletje is het de bedoeling dat jij de computer laat verliezen door 1 smiley over te houden.",80,70);
+        g.drawString("Hoe vraag je dan? Dat ga ik lekker niet zeggen.",80,85);
+        g.setFont(normal);
+
     }
 }
