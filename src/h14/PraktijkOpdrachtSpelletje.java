@@ -296,6 +296,5 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         g.drawString("In dit spelletje is het de bedoeling dat jij de computer laat verliezen door 1 smiley over te houden.",80,70);
         g.drawString("Hoe vraag je dan? Dat ga ik lekker niet zeggen.",80,85);
         g.setFont(normal);
-
     }
 }
