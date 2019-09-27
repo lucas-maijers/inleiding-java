@@ -40,8 +40,8 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         gewonnenCP = getImage(pad, "ComputerGewonnen.jpeg");
         wSmiley = getImage(pad, "ComputerWinnend.jpeg");
         vSmiley = getImage(pad, "NeutralSmiley.jpeg");
-        winSound = getAudioClip(pad,"YaySoundEffect.wav");
-        verliesSound = getAudioClip(pad,"AwwSoundEffect.wav");
+        winSound = getAudioClip(pad, "YaySoundEffect.wav");
+        verliesSound = getAudioClip(pad, "AwwSoundEffect.wav");
 
         // Sommige Waarde enzo
         computerZet = false;
@@ -85,15 +85,7 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             }
             g.drawImage(startSmiley,x+=50,y,50,50,this);
         }
-
-        // EindSmiley
-        if (gameOver) {
-            if (!computerZet) {
-                g.drawImage(gewonnenCP,50,120,300,400,this);
-            } else {
-                g.drawImage(verlorenCP,50,120,400,400,this);
-            }
-        }
+        gameOver(g);
     }
 
     class HaalSmileysWeg implements ActionListener {
@@ -181,6 +173,19 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             verliesSound.play();
         }
     }
+
+    // Gameover
+    private void gameOver(Graphics g) {
+        // EindSmiley
+        if (gameOver) {
+            if (!computerZet) {
+                g.drawImage(gewonnenCP,50,120,300,400,this);
+            } else {
+                g.drawImage(verlorenCP,50,120,400,400,this);
+            }
+        }
+    }
+
     // Uitleg
     private void uitleg(Graphics g) {
         Font normal = new Font("Ariel",Font.PLAIN,12);
