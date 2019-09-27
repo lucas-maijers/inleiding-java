@@ -129,10 +129,10 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     private void computer() {
         aantalWeghalen  = 0;
         int randomWeg = (int) (Math.random()*3+1);
-        int modulo;
-        modulo = aantalSmileys % 4;
+        int computerBeurt;
+        computerBeurt = aantalSmileys % 4;
 
-        switch (modulo) {
+        switch (computerBeurt) {
             case 0:
                 aantalWeghalen = 3;
                 startSmiley = wSmiley;
