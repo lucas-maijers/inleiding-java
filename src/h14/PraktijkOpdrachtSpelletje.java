@@ -76,8 +76,8 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         g.drawString(nogTeGaan,50,125);
 
         // Smileys te gaan
-        int x=50;
-        int y=130;
+        int x = 50;
+        int y = 130;
         for (int i=0; i < aantalSmileys; i++) {
             if (i % 4 == 0) {
                 y +=55;
@@ -142,15 +142,15 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         modulo = aantalSmileys % 4;
 
         switch (modulo) {
-            case 2:
-                aantalWeghalen = 1;
+            case 0:
+                aantalWeghalen = 3;
                 startSmiley = wSmiley;
                 break;
             case 1:
                 aantalWeghalen = randomWeg;
                 break;
-            case 0:
-                aantalWeghalen = 3;
+            case 2:
+                aantalWeghalen = 1;
                 startSmiley = wSmiley;
                 break;
             case 3:
@@ -159,9 +159,9 @@ public class PraktijkOpdrachtSpelletje extends Applet {
                 break;
         }
 
-        aantalSmileys -=aantalWeghalen;
+        aantalSmileys -= aantalWeghalen;
         huidigeZet++;
-        computerZet =huidigeZet <= 6 || startSmiley != wSmiley;
+        computerZet = huidigeZet <= 6 || startSmiley != wSmiley;
 
         response = "De computer heeft: " + aantalWeghalen + " Smileys weggehaald";
         System.out.println(huidigeZet);
