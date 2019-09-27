@@ -139,9 +139,9 @@ public class PraktijkOpdrachtSpelletje extends Applet {
 
         boolean geenMogelijkheid = true;
         int randomWeg = (int) (Math.random()*3+1);
-        // zet 1
 
         aantalWeghalen = 0;
+        // zet 1
         if (huidigeZet == 1) {
             if (aantalSmileys == 20) {
                 aantalWeghalen = 3;
@@ -258,6 +258,7 @@ public class PraktijkOpdrachtSpelletje extends Applet {
                 computerZet = true;
             } else startSmiley = wSmiley;
         }
+        // Zet 7
         if (huidigeZet == 7) {
             if (aantalSmileys == 1) {
                 aantalWeghalen = 1;
