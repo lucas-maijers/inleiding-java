@@ -117,7 +117,6 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             }
             input.setText("");
             repaint();
-
         }
     }
 
