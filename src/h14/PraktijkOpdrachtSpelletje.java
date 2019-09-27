@@ -136,138 +136,32 @@ public class PraktijkOpdrachtSpelletje extends Applet {
 
 
     private void computer() {
-
-        boolean geenMogelijkheid = true;
+        aantalWeghalen  = 0;
         int randomWeg = (int) (Math.random()*3+1);
+        int modulo;
+        modulo = aantalSmileys % 4;
 
-        aantalWeghalen = 0;
-        // zet 1
-        if (huidigeZet == 1) {
-            if (aantalSmileys == 20) {
-                aantalWeghalen = 3;
-                huidigeZet++;
+        switch (modulo) {
+            case 2:
+                aantalWeghalen = 1;
                 startSmiley = wSmiley;
-            }
-            else aantalWeghalen = 1;
-        }
-        //zet 2
-        if (huidigeZet == 2) {
-            if (aantalSmileys < 17) {
-                if (aantalSmileys - 1 == 13) {
-                    aantalWeghalen = 1;
-                }
-                if (aantalSmileys - 2 == 13) {
-                    aantalWeghalen = 2;
-                }
-                if (aantalSmileys - 3 == 13) {
-                    aantalWeghalen = 3;
-                }
-                huidigeZet++;
+                break;
+            case 1:
+                aantalWeghalen = randomWeg;
+                break;
+            case 0:
+                aantalWeghalen = 3;
                 startSmiley = wSmiley;
-            }
-            //Geen 13
-            if (aantalSmileys-1 == 17) {
-                aantalWeghalen = 1;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-2 == 17) {
+                break;
+            case 3:
                 aantalWeghalen = 2;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-3 == 17) {
-                aantalWeghalen = 3;
-                geenMogelijkheid = false;
-            }
-            if (geenMogelijkheid) {
-                aantalWeghalen = randomWeg;
-            } else startSmiley = wSmiley;
-        }
-        // zet 3
-        if (huidigeZet == 3) {
-            // Geen 9
-            if (aantalSmileys-1 == 13) {
-                aantalWeghalen = 1;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-2 == 13) {
-                aantalWeghalen = 2;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-3 == 13) {
-                aantalWeghalen = 3;
-                geenMogelijkheid = false;
-            }
-            if (geenMogelijkheid) {
-                aantalWeghalen = randomWeg;
-            } else startSmiley = wSmiley;
-        }
-        //zet 4
-        if (huidigeZet == 4) {
-            // Geen 5
-            if (aantalSmileys-1 == 9) {
-                aantalWeghalen = 1;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-2 == 9) {
-                aantalWeghalen = 2;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-3 == 9) {
-                aantalWeghalen = 3;
-                geenMogelijkheid = false;
-            }
-            if (geenMogelijkheid) {
-                aantalWeghalen = randomWeg;
-            } else startSmiley = wSmiley;
-        }
-        //zet 5
-        if (huidigeZet == 5) {
-            // Geen 1
-            if (aantalSmileys-1 == 5) {
-                aantalWeghalen = 1;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-2 == 5) {
-                aantalWeghalen = 2;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-3 == 5) {
-                aantalWeghalen = 3;
-                geenMogelijkheid = false;
-            }
-            if (geenMogelijkheid) {
-                aantalWeghalen = randomWeg;
-            } else startSmiley = wSmiley;
-        }
-        // Zet 6
-        if (huidigeZet == 6) {
-            if (aantalSmileys-1 == 1) {
-                aantalWeghalen = 1;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-2 == 1) {
-                aantalWeghalen = 2;
-                geenMogelijkheid = false;
-            }
-            if (aantalSmileys-3 == 1) {
-                aantalWeghalen = 3;
-                geenMogelijkheid = false;
-            }
-            if (geenMogelijkheid) {
-                aantalWeghalen = randomWeg;
-                computerZet = true;
-            } else startSmiley = wSmiley;
-        }
-        // Zet 7
-        if (huidigeZet == 7) {
-            if (aantalSmileys == 1) {
-                aantalWeghalen = 1;
-                computerZet = true;
-            }
+                startSmiley = wSmiley;
+                break;
         }
 
         aantalSmileys -=aantalWeghalen;
         huidigeZet++;
+        computerZet =huidigeZet <= 6 || startSmiley != wSmiley;
 
         response = "De computer heeft: " + aantalWeghalen + " Smileys weggehaald";
         System.out.println(huidigeZet);
