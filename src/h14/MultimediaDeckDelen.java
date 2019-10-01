@@ -20,7 +20,7 @@ public class MultimediaDeckDelen extends Applet {
 
         deck=new String[52];
         // Harten
-        deck[0]="Harten een";
+        deck[0]="Harten aas";
         deck[1]="Harten twee";
         deck[2]="Harten drie";
         deck[3]="Harten vier";
@@ -34,7 +34,7 @@ public class MultimediaDeckDelen extends Applet {
         deck[11]="Harten vrouw";
         deck[12]="Harten heer";
         // Klaver
-        deck[13]="Klaver een";
+        deck[13]="Klaver aas";
         deck[14]="Klaver twee";
         deck[15]="Klaver drie";
         deck[16]="Klaver vier";
@@ -48,7 +48,7 @@ public class MultimediaDeckDelen extends Applet {
         deck[24]="Klaver vrouw";
         deck[25]="Klaver heer";
         // Ruiten
-        deck[26]="Ruiten een";
+        deck[26]="Ruiten aas";
         deck[27]="Ruiten twee";
         deck[28]="Ruiten drie";
         deck[29]="Ruiten vier";
@@ -62,7 +62,7 @@ public class MultimediaDeckDelen extends Applet {
         deck[37]="Ruiten vrouw";
         deck[38]="Ruiten heer";
         // Schoppen
-        deck[39]="Schoppen een";
+        deck[39]="Schoppen aas";
         deck[40]="Schoppen twee";
         deck[41]="Schoppen drie";
         deck[42]="Schoppen vier";
