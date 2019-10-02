@@ -22,10 +22,9 @@ public class HerhalingSchaakbord extends Applet {
         while (rij < 8) {
             x=50;
             // Even Rijen
-            if (rij == 0 | rij == 2 || rij == 4 || rij == 6) {
+            if (rij % 2 == 0) {
                 for (int kolom=0; kolom < 8; kolom++) {
-
-                    if (kolom == 0 || kolom == 2 || kolom == 4 || kolom == 6) {
+                    if (kolom % 2 == 0) {
                         g.setColor(zwart);
                         g.fillRect(x, y, breedte, hoogte);
                     } else {
@@ -35,13 +34,11 @@ public class HerhalingSchaakbord extends Applet {
                     x+=breedte;
                 }
                 rij++;
-            } else {
-                // Oneven Rijen
-                x=50;
+            } else {// Oneven Rijen
                 y+=hoogte;
 
                 for (int kolom=0; kolom < 8; kolom++) {
-                    if (kolom == 0 || kolom == 2 || kolom == 4 || kolom == 6) {
+                    if (kolom % 2 == 0) {
                         g.setColor(wit);
                         g.fillRect(x, y, breedte, hoogte);
                     } else {
