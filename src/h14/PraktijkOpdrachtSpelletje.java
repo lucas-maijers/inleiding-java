@@ -1,4 +1,5 @@
 // PraktijkOpdracht
+/* Copyright Lucas Maijers 2019 */
 package h14;
 
 import java.applet.*;
@@ -16,10 +17,10 @@ public class PraktijkOpdrachtSpelletje extends Applet {
     private Image vSmiley;
     private AudioClip winSound;
     private AudioClip verliesSound;
-
     private boolean computerZet;
     private boolean gameOver;
 
+    private int soundPicker;
     private int aantalSmileys;
     private int aantalWeghalen;
     private int huidigeZet;
@@ -49,6 +50,8 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         aantalSmileys=23;
         response = "";
         startSmiley = vSmiley;
+        soundPicker= (int) (Math.random() *2+1);
+        System.out.println(soundPicker +"\n\n");
 
         // Tekstvakken en die bende
         informatie = new Label("Hoeveel smileys neem je (één, twee of drie)?");
@@ -121,6 +124,9 @@ public class PraktijkOpdrachtSpelletje extends Applet {
             computerZet = false;
             gameOver = false;
             startSmiley = vSmiley;
+            soundPicker= (int) (Math.random() *2+1);
+            System.out.println(soundPicker +"\n\n");
+            repaint();
             repaint();
         }
     }
@@ -131,6 +137,10 @@ public class PraktijkOpdrachtSpelletje extends Applet {
         int randomWeg = (int) (Math.random()*3+1);
         int computerBeurt;
         computerBeurt = aantalSmileys % 4;
+
+        if (aantalSmileys == 1) {
+            computerZet = true;
+        }
 
         switch (computerBeurt) {
             case 0:
@@ -152,7 +162,6 @@ public class PraktijkOpdrachtSpelletje extends Applet {
 
         aantalSmileys -= aantalWeghalen;
         huidigeZet++;
-        computerZet = huidigeZet <= 6 || startSmiley != wSmiley;
 
         response = "De computer heeft: " + aantalWeghalen + " Smileys weggehaald";
         System.out.println(huidigeZet);
@@ -160,8 +169,10 @@ public class PraktijkOpdrachtSpelletje extends Applet {
 
     // Spel Voorbij
     private void spelOver() {
+        int randomSound = (int) (Math.random()*2+1);
         gameOver = true;
         aantalSmileys = 0;
+
         if (computerZet) {
             response = "Dat is gemeen, je hebt mij verslagen.";
             nogTeGaan = "Er zijn geen Smileys meer over.";
